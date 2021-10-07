@@ -23,6 +23,7 @@ First, it's important that you have these three scripts. They are the foundation
  3. Create the dialogue using the inspector on the `DialogueTrigger/ [NAME]Trigger` `GameObject`;
  4. Assign the `DialogueTrigger.TriggerDialogue()` to a button or action in your game (it was done with a button in the example code in this repository);
  5. Assign the `DialogueManager.DisplayNextSentence()` to another button or keyPress;
+ 6. Assign a `TMP_Text` to display the name and the content of the dialogue in the `DialogueManager.cs`.
  
  ## How to customize it?
 You can change the `Dialogue.cs` to define other data. You can access all the data in the DialogueManager.cs and display it. It is not recommended that any dialog data be changed or accessed in the `DialogueTrigger.cs`.
