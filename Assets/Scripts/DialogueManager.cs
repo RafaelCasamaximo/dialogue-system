@@ -6,6 +6,8 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
 
+    public static DialogueManager instance;
+
     public TMP_Text nameText;
     public TMP_Text contentText;
 
@@ -19,6 +21,18 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+            return;
+        }
+        Destroy(this);
+        return;
     }
 
     public void StartDialogue(Dialogue dialogue)
